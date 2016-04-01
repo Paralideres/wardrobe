@@ -1,0 +1,14 @@
+.equipo-dropdown
+{
+    width:100%;
+}
+.usuarios-equipos>li
+{
+    float: left;
+    padding: 5px;
+    
+}
+.usuarios-equipos
+{
+    list-style: none;
+}

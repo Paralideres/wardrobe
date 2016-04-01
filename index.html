@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Bootstrap 101 Template</title>
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/body.css" rel="stylesheet">
+    <link href="css/equipos.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>          
+        
+        
+        <div class="container-fluid contenedor-cuerpo">
+        <div class="row">
+            <div class="col-md-2" style="background:red;">
+             <a  href="#"><h1>ParaLideres</h1></a> 
+             <!--Dropdown usuario-->                    
+                    <div class="list-group" id="accordion" role="tablist" aria-multiselectable="true">
+  <div class="panel panel-default">
+    <div class="panel-heading" role="tab" id="headingOne">
+      <h4 class="panel-title">
+        <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+          <img src="./img/imgUsuario.jpg"  class="img-responsive img-circle img-usuario pull-left" alt="">
+                    
+                        <h4>Byron Rosas</h4>
+                        <p><span>2 </span><span>Publicaciones Creadas </span></p>
+                        <span class="caret pull-right"></span>                    
+                    
+        </a>
+      </h4>
+    </div>
+    <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+      <div class="panel-body">
+          <ul class="lista-equipos">
+                     <li><a href="#" >Cras justo odio <span class="caret pull-right"></span></a></li>
+                     <li><a href="#" >Cras justo odio <span class="caret pull-right"></span></a></li>
+                     <li><a href="#" >Cras justo odio <span class="caret pull-right"></span></a></li>
+                     <li><a href="#" >Cras justo odio <span class="caret pull-right"></span></a></li>
+          </ul>        
+      </div>
+    </div>
+  </div>
+                    </div> 
+              <!--Fin de Dropdown usuario--->              
+            </div>
+            <div class="col-md-10" style="background:yellow;">
+                <!--menu-->
+                <nav class="navbar navbar-default">                    
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">           
+            <form class="navbar-form navbar-left" role="search">
+                <div class="form-group">
+                <button class="btn btn-default">Ver Equipos</button>
+                <button class="btn btn-default">Ver Recursos</button>    
+                <input type="text" class="form-control" placeholder="Buscador de recursos">
+                </div>                
+            </form>
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="#">Crear Recurso</a></li>
+                <li><a href="#">Crear Equipo</a></li>
+            </ul>
+            </div><!-- /.navbar-collapse -->        
+        </nav>
+                <!--fin menu-->
+                <!--Inicio presentacion equipos-->
+                <div>
+                    <div class="panel panel-default">
+                        <div class="panel-body">
+                            <span class="pull-left">Todos los Equipos</span>
+                                <div class="dropdown">
+                                <button class="btn btn-default dropdown-toggle pull-right" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                                    Ordenar Equipos por A/Z
+                                    <span class="caret"></span>
+                                </button>
+                                <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                                    <li><a href="#">Action</a></li>
+                                    <li><a href="#">Another action</a></li>
+                                    <li><a href="#">Something else here</a></li>
+                                    <li role="separator" class="divider"></li>
+                                    <li><a href="#">Separated link</a></li>
+                                </ul>
+                                </div>                            
+                        </div>
+                    </div>
+                </div>
+                <!--fin de cabezera de presentacion de equipos-->
+                <div class="cuerpo-equipos">
+                    <div class="row">
+                       <div class="col-md-3" >
+                           <div class="clearfix center-block" style="background:red; padding:5px;">
+                                <div class="dropdown">
+                                <button class="btn btn-default dropdown-toggle   equipo-dropdown" type="button" id="dropdownEquipo" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                                    <img src="./img/imgUsuario.jpg"  class="img-responsive img-circle img-log-equipo pull-left" alt="">
+                                    Predicadores
+                                    <span class="caret"></span>
+                                </button>
+                                <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                                    <li><a href="#">Editar Equipo</a></li>
+                                    <li><a href="#">Eliminar Equipo</a></li>
+                                    <li><a href="#">Cambiar Nombre</a></li>
+                                    <li role="separator" class="divider"></li>
+                                    <li><a href="#">Separated link</a></li>
+                                </ul>
+                                </div>
+                                <div class="clearfix">  
+                                <ul class="usuarios-equipos">
+                                    <li><a href="#"><img src="./img/imgUsuario.jpg"  class="img-responsive img-circle img-log-equipo" alt=""></a></li>
+                                    <li><a href="#"><img src="./img/imgUsuario.jpg"  class="img-responsive img-circle img-log-equipo" alt=""></a></li>
+                                    <li><a href="#"><img src="./img/imgUsuario.jpg"  class="img-responsive img-circle img-log-equipo" alt=""></a></li>
+                                    <li><a href="#"><img src="./img/imgUsuario.jpg"  class="img-responsive img-circle img-log-equipo" alt=""></a></li>
+                                    <li><a href="#"><img src="./img/imgUsuario.jpg"  class="img-responsive img-circle img-log-equipo" alt=""></a></li>
+                                </ul>
+                                </div>
+                                <hr>
+                               <div class="notificaciones">
+                               <p>Ultima Actividad-Hoy</p>
+                               <p><b>Juan,</b>Agreso a Sandra al equipo</p>
+                           </div>
+                           <div>
+                               <button class="btn">Ir al Equipo</button>
+                               <button class="btn">Agregar Colaboradores</button>
+                           </div>                                 
+                           </div>
+                       </div><!--Primera col-->
+                       <div class="col-md-3" style="background:blue;">
+                           <div class="clearfix center-block" style="background:red; padding:5px;">
+                                <div class="dropdown">
+                                <button class="btn btn-default dropdown-toggle   equipo-dropdown" type="button" id="dropdownEquipo" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                                    <img src="./img/imgUsuario.jpg"  class="img-responsive img-circle img-log-equipo pull-left" alt="">
+                                    Predicadores
+                                    <span class="caret"></span>
+                                </button>
+                                <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                                    <li><a href="#">Editar Equipo</a></li>
+                                    <li><a href="#">Eliminar Equipo</a></li>
+                                    <li><a href="#">Cambiar Nombre</a></li>
+                                    <li role="separator" class="divider"></li>
+                                    <li><a href="#">Separated link</a></li>
+                                </ul>
+                                </div>
+                                <div class="clearfix">  
+                                <ul class="usuarios-equipos">
+                                    <li><a href="#"><img src="./img/imgUsuario.jpg"  class="img-responsive img-circle img-log-equipo" alt=""></a></li>
+                                    <li><a href="#"><img src="./img/imgUsuario.jpg"  class="img-responsive img-circle img-log-equipo" alt=""></a></li>
+                                    <li><a href="#"><img src="./img/imgUsuario.jpg"  class="img-responsive img-circle img-log-equipo" alt=""></a></li>
+                                    <li><a href="#"><img src="./img/imgUsuario.jpg"  class="img-responsive img-circle img-log-equipo" alt=""></a></li>
+                                    <li><a href="#"><img src="./img/imgUsuario.jpg"  class="img-responsive img-circle img-log-equipo" alt=""></a></li>
+                                </ul>
+                                </div>
+                                <hr>
+                               <div class="notificaciones">
+                               <p>Ultima Actividad-Hoy</p>
+                               <p><b>Juan,</b>Agreso a Sandra al equipo</p>
+                           </div>
+                           <div>
+                               <button class="btn">Ir al Equipo</button>
+                               <button class="btn">Agregar Colaboradores</button>
+                           </div>                                 
+                           </div>
+                       </div>
+                                              <div class="col-md-3" style="background:blue;">
+                           <div class="clearfix center-block" style="background:red; padding:5px;">
+                                <div class="dropdown">
+                                <button class="btn btn-default dropdown-toggle   equipo-dropdown" type="button" id="dropdownEquipo" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                                    <img src="./img/imgUsuario.jpg"  class="img-responsive img-circle img-log-equipo pull-left" alt="">
+                                    Predicadores
+                                    <span class="caret"></span>
+                                </button>
+                                <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                                    <li><a href="#">Editar Equipo</a></li>
+                                    <li><a href="#">Eliminar Equipo</a></li>
+                                    <li><a href="#">Cambiar Nombre</a></li>
+                                    <li role="separator" class="divider"></li>
+                                    <li><a href="#">Separated link</a></li>
+                                </ul>
+                                </div>
+                                <div class="clearfix">  
+                                <ul class="usuarios-equipos">
+                                    <li><a href="#"><img src="./img/imgUsuario.jpg"  class="img-responsive img-circle img-log-equipo" alt=""></a></li>
+                                    <li><a href="#"><img src="./img/imgUsuario.jpg"  class="img-responsive img-circle img-log-equipo" alt=""></a></li>
+                                    <li><a href="#"><img src="./img/imgUsuario.jpg"  class="img-responsive img-circle img-log-equipo" alt=""></a></li>
+                                    <li><a href="#"><img src="./img/imgUsuario.jpg"  class="img-responsive img-circle img-log-equipo" alt=""></a></li>
+                                    <li><a href="#"><img src="./img/imgUsuario.jpg"  class="img-responsive img-circle img-log-equipo" alt=""></a></li>
+                                </ul>
+                                </div>
+                                <hr>
+                               <div class="notificaciones">
+                               <p>Ultima Actividad-Hoy</p>
+                               <p><b>Juan,</b>Agreso a Sandra al equipo</p>
+                           </div>
+                           <div>
+                               <button class="btn">Ir al Equipo</button>
+                               <button class="btn">Agregar Colaboradores</button>
+                           </div>                                 
+                           </div>
+                       </div>
+                                              <div class="col-md-3" style="background:blue;">
+                           <div class="clearfix center-block" style="background:red; padding:5px;">
+                                <div class="dropdown">
+                                <button class="btn btn-default dropdown-toggle   equipo-dropdown" type="button" id="dropdownEquipo" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                                    <img src="./img/imgUsuario.jpg"  class="img-responsive img-circle img-log-equipo pull-left" alt="">
+                                    Predicadores
+                                    <span class="caret"></span>
+                                </button>
+                                <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                                    <li><a href="#">Editar Equipo</a></li>
+                                    <li><a href="#">Eliminar Equipo</a></li>
+                                    <li><a href="#">Cambiar Nombre</a></li>
+                                    <li role="separator" class="divider"></li>
+                                    <li><a href="#">Separated link</a></li>
+                                </ul>
+                                </div>
+                                <div class="clearfix">  
+                                <ul class="usuarios-equipos">
+                                    <li><a href="#"><img src="./img/imgUsuario.jpg"  class="img-responsive img-circle img-log-equipo" alt=""></a></li>
+                                    <li><a href="#"><img src="./img/imgUsuario.jpg"  class="img-responsive img-circle img-log-equipo" alt=""></a></li>
+                                    <li><a href="#"><img src="./img/imgUsuario.jpg"  class="img-responsive img-circle img-log-equipo" alt=""></a></li>
+                                    <li><a href="#"><img src="./img/imgUsuario.jpg"  class="img-responsive img-circle img-log-equipo" alt=""></a></li>
+                                    <li><a href="#"><img src="./img/imgUsuario.jpg"  class="img-responsive img-circle img-log-equipo" alt=""></a></li>
+                                </ul>
+                                </div>
+                                <hr>
+                               <div class="notificaciones">
+                               <p>Ultima Actividad-Hoy</p>
+                               <p><b>Juan,</b>Agreso a Sandra al equipo</p>
+                           </div>
+                           <div>
+                               <button class="btn">Ir al Equipo</button>
+                               <button class="btn">Agregar Colaboradores</button>
+                           </div>                                 
+                           </div>
+                       </div>
+                                              <div class="col-md-3" style="background:blue;">
+                           <div class="clearfix center-block" style="background:red; padding:5px;">
+                                <div class="dropdown">
+                                <button class="btn btn-default dropdown-toggle   equipo-dropdown" type="button" id="dropdownEquipo" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                                    <img src="./img/imgUsuario.jpg"  class="img-responsive img-circle img-log-equipo pull-left" alt="">
+                                    Predicadores
+                                    <span class="caret"></span>
+                                </button>
+                                <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                                    <li><a href="#">Editar Equipo</a></li>
+                                    <li><a href="#">Eliminar Equipo</a></li>
+                                    <li><a href="#">Cambiar Nombre</a></li>
+                                    <li role="separator" class="divider"></li>
+                                    <li><a href="#">Separated link</a></li>
+                                </ul>
+                                </div>
+                                <div class="clearfix">  
+                                <ul class="usuarios-equipos">
+                                    <li><a href="#"><img src="./img/imgUsuario.jpg"  class="img-responsive img-circle img-log-equipo" alt=""></a></li>
+                                    <li><a href="#"><img src="./img/imgUsuario.jpg"  class="img-responsive img-circle img-log-equipo" alt=""></a></li>
+                                    <li><a href="#"><img src="./img/imgUsuario.jpg"  class="img-responsive img-circle img-log-equipo" alt=""></a></li>
+                                    <li><a href="#"><img src="./img/imgUsuario.jpg"  class="img-responsive img-circle img-log-equipo" alt=""></a></li>
+                                    <li><a href="#"><img src="./img/imgUsuario.jpg"  class="img-responsive img-circle img-log-equipo" alt=""></a></li>
+                                </ul>
+                                </div>
+                                <hr>
+                               <div class="notificaciones">
+                               <p>Ultima Actividad-Hoy</p>
+                               <p><b>Juan,</b>Agreso a Sandra al equipo</p>
+                           </div>
+                           <div>
+                               <button class="btn">Ir al Equipo</button>
+                               <button class="btn">Agregar Colaboradores</button>
+                           </div>                                 
+                           </div>
+                       </div>                       
+                    </div>                   
+                </div>
+            </div>            
+        </div>
+        </div>               
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+  </body>
+</html>
