@@ -1,0 +1,22 @@
+{
+  "name": "front",
+  "version": "0.0.1",
+  "description": "Pl Front",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Paralideres/front.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Paralideres/front/issues"
+  },
+  "homepage": "https://github.com/Paralideres/front#readme",
+  "devDependencies": {
+    "express": "^4.13.4"
+  }
+}
