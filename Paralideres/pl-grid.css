@@ -1,0 +1,140 @@
+body,html,h2{
+	margin: 0;
+	padding: 0;
+}
+
+body{
+	background: #eee;
+	font-family: sans-serif;
+	color: #333;
+}
+
+h2{
+	text-align: center;
+	font-size: .9em;
+}
+
+.fila{
+	width: 90%;
+	margin: 2% auto;
+	overflow: hidden;
+}
+
+.columna{
+	background: lightblue;
+	box-sizing: border-box;
+	float: left;
+	margin-right: 2%;
+	padding: 1em 0;
+	width: 100%
+}
+
+
+/*SMALL GRID*/
+@media(min-width: 480px){
+	/*4 COLUMNAS Y 6 COLUMNAS SON 2 EN SMALL*/
+	.cuatro-columnas .columna,
+	.seis-columnas .columna{
+		width: 49%
+	}
+	.cuatro-columnas .columna:nth-child(2n),
+	.seis-columnas .columna:nth-child(2n){
+		margin-right: 0;
+	}
+	/*DOCE COLUMNAS SON 3 COLUMNAS EN SMALL*/
+.doce-columnas .columna{
+	width: 32%;
+}
+.doce-columnas .columna:nth-child(3n){
+	margin-right: 0;
+}
+
+}
+
+/*MEDIUM GRID*/
+@media(min-width: 768px){
+/*TRES COLUMNAS*/
+.tres-columnas .columna{
+	width: 32%;
+}
+.tres-columnas .columna:nth-child(3n){
+	margin-right: 0;
+}
+
+/*SEIS COLUMNAS*/
+.seis-columnas .columna{
+	width: 15%;
+}
+
+.seis-columnas .columna:nth-child(2n){
+		margin-right: 2%;
+	}
+.seis-columnas .columna:nth-child(6n){
+	margin-right: 0;
+}
+
+/*DOCE COLUMNAS SON 4 EN MEDIUM*/
+.doce-columnas .columna{
+	width: 23.5%;
+}
+
+.doce-columnas .columna:nth-child(3n){
+	margin-right: 2%;
+}
+
+.doce-columnas .columna:nth-child(4n){
+	margin-right: 0;
+}
+
+/*RIGHT Y LEFT SIDEBAR*/
+.right-sidebar .sidebar,
+.left-sidebar .sidebar{
+	width: 23.5%;
+}
+.right-sidebar .content,
+.left-sidebar .content{
+	width: 74.5%
+}
+.right-sidebar .sidebar{
+	margin-right: 0;
+}
+.left-sidebar .content{
+	margin-right: 0;
+}
+}
+
+/*LARGE GRID*/
+@media(min-width: 1024px){
+	/*DOS COLUMNAS*/
+.dos-columnas .columna{
+	width: 49%
+}
+.dos-columnas .columna:nth-child(2n){
+	margin-right: 0;
+}
+
+/*CUATRO COLUMNAS*/
+.cuatro-columnas .columna{
+	width: 23.5%;
+}
+.cuatro-columnas .columna:nth-child(2n){
+		margin-right: 2%;
+}
+.cuatro-columnas .columna:nth-child(4n){
+	margin-right: 0;
+}
+
+.doce-columnas .columna:nth-child(4n){
+	margin-right: 2%;
+}
+
+
+/*DOCE COLUMNAS*/
+.doce-columnas .columna{
+	width: 6.5%;
+}
+.doce-columnas .columna:nth-child(12n){
+	margin-right: 0;
+}
+
+}
