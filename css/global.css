@@ -121,3 +121,11 @@ ul#nav li a.selected {
 	background-color: #34495e;
 	color: #fff;
 }
+
+ul#nav li a span.icon-circle {
+	color: #ED0202;
+	font-size: 1em;
+	display: inline-block;
+	padding: 5px;
+
+}
