@@ -12,9 +12,11 @@ body{
 
 div#header {
 	width: 100%;
-	height: 50px;
+	height: 60px;
 	background-color: #34495e;
 	margin:0 auto;
+	float: left;
+	position: relative;
 }
 
 a {
@@ -62,33 +64,24 @@ div#container {
     font-weight: bold;
   }
 
-.user-info {
-	width: 100%;
-  	padding: 2px;
-  	text-align: right;
-  	background: #2c3e50;
-}
+	.user-info {
+		width: 100%;
+	  background: #2c3e50;
+	}
 
 	.info {
+		float: right;
 		color: #fff;
     font-weight: lighter;
 	}
 
 
 .sidebar {
+	overflow: hidden;
 	width: 250px;
 	height: 100%;
 	background-color: #2c3e50;
 	float: left;
-	position: fixed;
-}
-
-.content {
-	width: auto;
-	margin-left: 250px;
-	height: 100%;
-	background-color: #fff;
-	padding: 15px;
 }
 
 h3 {
@@ -110,6 +103,10 @@ ul#nav li a {
 	display: block;
 	padding: 12px;
 	font-size: 0.8em;
+	-webkit-transition:0.2s;
+	-moz-transition:0.2s;
+	-o-transition:0.2s;
+	transition:0.2s;
 }
 
 ul#nav li a:hover {
@@ -122,10 +119,100 @@ ul#nav li a.selected {
 	color: #fff;
 }
 
-ul#nav li a span.icon-circle {
+ul#nav li a span.icon-circle.red {
 	color: #ED0202;
 	font-size: 1em;
 	display: inline-block;
 	padding: 5px;
 
+}
+
+ul#nav li a span.icon-circle.yellow {
+	color: #FA8F02;
+	font-size: 1em;
+	display: inline-block;
+	padding: 5px;
+
+}
+
+ul#nav li a span.icon-circle.blue {
+	color: #0AE2FA;
+	font-size: 1em;
+	display: inline-block;
+	padding: 5px;
+
+}
+
+ul#nav li a span.icon-circle.green {
+	color: #2EFA05;
+	font-size: 1em;
+	display: inline-block;
+	padding: 5px;
+
+}
+
+ul#nav li a span.icon-circle.white {
+	color: #EEF2ED;
+	font-size: 1em;
+	display: inline-block;
+	padding: 5px;
+
+}
+
+.sponsor {
+	width: 98%;
+	color: #fff;
+	text-align: center;
+	font-size: 11px;
+  font-weight: lighter;
+  border: 1px solid #fff;
+}
+
+.sponsor-banner {
+	width: 100%;
+  padding: 10px;
+  text-align: center;
+  }
+  
+  	img.sponsor{
+  		display: inline-block;
+    	width: 100%;
+    	margin-right: 5px;
+  	}
+
+
+.content {
+	width: auto;
+	margin-left: 250px;
+	height: 100%;
+	background-color: #fff;
+	padding: 15px;
+	overflow: hidden;
+}
+
+.group {
+	width: 350px;
+	height: 350px;
+	margin-top: 1.5em;
+	margin-left: 0.2em;
+	background: #95a5a6;
+  color: #ecf0f1;
+  display: inline-block;
+}
+
+.name-group {
+	color: #fff;
+	text-shadow: 0px 0px 1px #ddd;
+	background-color: #7f8c8d;
+	padding: 5px;
+	font-weight: 300;
+}
+
+
+.members {
+	content: '';
+	float: left;
+  border-radius: 50%;
+  margin: 0 1em 0 0;
+  margin-top: 5em
 }
