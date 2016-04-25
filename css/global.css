@@ -106,10 +106,14 @@ div#container{
 }
 
 h3{
-  margin-top: 10px;
-  padding: 10px;
+  margin-top: 15px;
+  padding: 15px;
   color: #fff;
-  }
+}
+
+h3 span.icon-user-plus{
+  float: right;
+}
 
 ul#nav{
 
@@ -178,17 +182,19 @@ ul#nav li a span.icon-angle-down{
 }
 
 .publicidad{
-  width: 98%;
+  width: 99%;
   color: #fff;
   text-align: center;
   font-size: 11px;
   font-weight: lighter;
   border: 1px solid #fff;
+  margin-top: 7em;
 }
 
 .imagen-publicidad{
   width: 100%;
   padding: 10px;
+  margin: auto;
   text-align: center;
 }
   
@@ -235,7 +241,7 @@ ul#nav li a span.icon-angle-down{
 .content-order p{
   float: right;
   margin: auto;
-  padding: 20px;
+  padding: 15px;
 }
 
 .team{
@@ -254,6 +260,12 @@ ul#nav li a span.icon-angle-down{
   background-color: #7f8c8d;
   padding: 5px;
   font-weight: 300;
+}
+
+.team span.icon-user-outline{
+  padding: 5px;
+  vertical-align: middle;
+  color: #0AE2FA;
 }
 
 .team span.icon-angle-down{
@@ -276,3 +288,20 @@ ul#nav li a span.icon-angle-down{
   vertical-align: middle;
   width: 60px;
 }
+
+.team-footer{
+  float: left;
+  width: 100%;
+  padding: 5px;
+  height: 30px;
+}
+
+.team-footer button.equipo{
+  
+}
+
+.team-footer button.colaboradores{
+
+}
+
+
