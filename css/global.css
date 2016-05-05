@@ -699,3 +699,83 @@ p{
   border-color: #0AE2FA;
   border-width: medium;
 }
+
+
+/*PERFIL DE USUARIO*/
+
+.content-user{
+  width: auto;
+  margin-left: 250px;
+  height: 100%;
+  background-color: #fff;
+  padding: 15px;
+  overflow: hidden;
+}
+
+button.edit-profile{
+  float: right;
+  padding: 10px 5px;
+  margin-right: 20px;
+  background: #4479BA;
+  color: #FFF;
+  border-radius: 4px;
+  border: solid 1px #20538D;
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.4);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.4), 0 1px 1px rgba(0, 0, 0, 0.2);
+  transition-duration: 0.2s;
+  user-select:none;
+}
+
+.user-social{
+  margin-top: 5em;
+  font-weight: lighter;
+}
+
+button.social{
+  float: right;
+  padding: 5px 15px;
+  margin-right: 20px;
+  background: #fff;
+  color: #1abc9c;
+  border-radius: 4px;
+  border: solid 1px #1abc9c;
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.4);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.4), 0 1px 1px rgba(0, 0, 0, 0.2);
+  transition-duration: 0.2s;
+  user-select:none;
+}
+
+span.icon-file-text-o{
+  position: relative;
+  padding: 2px 2px;
+}
+
+span.icon-user-1{
+  position: relative;
+  padding: 2px 2px;
+  color: #bdc3c7;
+}
+
+span.icon-users{
+  position: relative;
+  padding: 2px 2px;
+  color: #bdc3c7;
+}
+
+.profile{
+  float: left;
+  margin-top: 3em;
+  width: 70%;
+  height: 100%
+  margin-left: 250px;
+  border: solid #EDEDED;
+  overflow: hidden;
+}
+
+span.profile-info img{
+  vertical-align: text-top;
+}
+
+span.profile-info{
+  font-weight: bold;
+}
