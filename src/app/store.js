@@ -4,10 +4,11 @@ import thunkMiddleware from 'redux-thunk';
 import * as reducers from './reducers';
 
 export function configureStore(history, initialState) {
-  const reducer = combineReducers({
-    reducers: [...reducers],
-    routing: routerReducer,
-  });
+  const reducer = combineReducers(Object.assign({}, reducers,
+    {
+      routing: routerReducer,
+    }
+  ));
 
   const store = createStore(
     reducer,

@@ -1,6 +1,7 @@
 import 'normalize.css';
 import './styles/global.css';
 
+import 'whatwg-fetch';
 import React, { Component } from 'react';
 import { Router, Route, IndexRoute, browserHistory, useRouterHistory } from 'react-router';
 import { syncHistoryWithStore } from 'react-router-redux';
