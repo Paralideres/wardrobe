@@ -27,7 +27,6 @@
     "css-loader": "^0.15.1",
     "eslint": "^1.10.3",
     "eslint-plugin-react": "^3.6.2",
-    "normalize.css": "^4.1.1",
     "postcss-loader": "^0.4.3",
     "react-hot-loader": "^3.0.0-beta.1",
     "style-loader": "^0.12.3",
@@ -37,8 +36,16 @@
   "dependencies": {
     "classnames": "^2.2.5",
     "griddle-react": "^0.6.0",
+    "history": "^2.1.2",
+    "lodash": "^4.13.1",
+    "normalize.css": "^4.1.1",
     "react": "^15.1.0",
     "react-dom": "^15.1.0",
-    "react-router": "^2.5.1"
+    "react-redux": "^4.4.5",
+    "react-router": "^2.5.1",
+    "react-router-redux": "^4.0.5",
+    "redux": "^3.5.2",
+    "redux-thunk": "^2.1.0",
+    "scroll-behavior": "^0.4.0"
   }
 }

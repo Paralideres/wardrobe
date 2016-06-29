@@ -1,28 +1,39 @@
 import 'normalize.css';
 import './styles/global.css';
 
-import React from 'react';
-import { Router, Route, browserHistory } from 'react-router';
+import React, { Component } from 'react';
+import { Router, Route, IndexRoute, browserHistory, useRouterHistory } from 'react-router';
+import { syncHistoryWithStore } from 'react-router-redux';
+import useScroll from 'scroll-behavior/lib/useSimpleScroll';
+import createBrowserHistory from 'history/lib/createBrowserHistory';
+import { Provider } from 'react-redux';
+
+import { configureStore } from './store';
 import Layout from './containers/Layout/Layout';
 import Users from './containers/Users';
 import Teams from './containers/Teams';
 import Resources from './containers/Resources';
 
-// If you use React Router, make this component
-// render <Router> with your routes. Currently,
-// only synchronous routes are hot reloaded, and
-// you will see a warning from <Router> on every reload.
-// You can ignore this warning. For details, see:
-// https://github.com/reactjs/react-router/issues/2182
+const state = window.__initialState__ || undefined;
+const store = configureStore(browserHistory, state);
+const createScrollHistory = useScroll(createBrowserHistory);
+const appHistory = useRouterHistory(createScrollHistory)();
+const history = syncHistoryWithStore(appHistory, store);
 
-export default function App() {
-  return (
-    <Router history={browserHistory}>
-      <Route component={Layout}>
-        <Route path="/" component={Users} />
-        <Route path="/teams" component={Teams} />
-        <Route path="/resources" component={Resources} />
-      </Route>
-    </Router>
-  );
+class App extends Component {
+  render() {
+    return (
+      <Provider store={store}>
+        <Router history={history}>
+          <Route path="/" component={Layout}>
+            <IndexRoute component={Users} />
+            <Route path="/teams" component={Teams} />
+            <Route path="/resources" component={Resources} />
+          </Route>
+        </Router>
+      </Provider>
+    );
+  }
 }
+
+export default App;
