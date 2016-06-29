@@ -1,0 +1,31 @@
+@import url(https://fonts.googleapis.com/css?family=Fira+Sans:400,400italic,500,500italic,700);
+
+html {
+  position: relative;
+  height: 100%;
+}
+
+body{
+  background-color: #f2f2f2;
+  font-family: 'Fira Sans';
+  height: 100%;
+}
+
+
+a {
+  color: #03658c;
+  text-decoration: none;
+}
+
+:global .app {
+  background-color: white;
+  max-width: 1440px;
+  min-width: 1024px;
+  margin: auto;
+  overflow-x: scroll;
+  position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    top: 0;
+}

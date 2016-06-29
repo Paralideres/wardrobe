@@ -1,24 +1,21 @@
 import styles from './Layout.css';
 import React, { PropTypes } from 'react';
+import { Link } from 'react-router';
 
 export default function Layout({ children }) {
   return (
     <div>
       <header className={styles.header}>
         <div className={styles.logo}>
-          <a href="#">Editor</a>
+          <Link to="/">Editor</Link>
         </div>
       </header>
-      <nav>
-        <a href="">Users</a>
-        <a href="">Teams</a>
-        <a href="">Resources</a>
-        <a href="">Polls</a>
-        <a href="">Collections</a>
-        <a href="">Categories</a>
-        <a href="">Tags</a>
+      <nav className={styles.sidebar}>
+        <Link to="/">Users</Link>
+        <Link to="/teams">Teams</Link>
+        <Link to="/resources">Resources</Link>
       </nav>
-      <main>
+      <main className={styles.main}>
         {children}
       </main>
     </div>

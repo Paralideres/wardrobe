@@ -1,6 +1,12 @@
+import 'normalize.css';
+import './styles/global.css';
+
 import React from 'react';
 import { Router, Route, browserHistory } from 'react-router';
-import Layout from './containers/Layout';
+import Layout from './containers/Layout/Layout';
+import Users from './containers/Users';
+import Teams from './containers/Teams';
+import Resources from './containers/Resources';
 
 // If you use React Router, make this component
 // render <Router> with your routes. Currently,
@@ -12,7 +18,11 @@ import Layout from './containers/Layout';
 export default function App() {
   return (
     <Router history={browserHistory}>
-      <Route path="/" component={Layout} />
+      <Route component={Layout}>
+        <Route path="/" component={Users} />
+        <Route path="/teams" component={Teams} />
+        <Route path="/resources" component={Resources} />
+      </Route>
     </Router>
   );
 }
