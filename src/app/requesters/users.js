@@ -1,4 +1,6 @@
+import { get } from '../utils/request';
+
 export function requestUsers() {
-  return fetch('/api/users').
+  return get('/api/users').
     then(response => response.json());
 }

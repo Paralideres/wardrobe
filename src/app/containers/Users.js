@@ -1,12 +1,11 @@
+import styles from './Layout/Layout.css';
 import React, { Component, PropTypes } from 'react';
 import { connect } from 'react-redux';
-import Section from '../components/grid/Section';
-import Col from '../components/grid/Col';
 import Table from '../components/table/Table';
 
 import { getUsers } from '../actions/usersActions';
 
-const columns = ['id', 'label', 'slug', 'description'];
+const columns = ['id', 'username', 'email', 'created_at'];
 
 class Users extends Component {
   componentDidMount() {
@@ -15,11 +14,19 @@ class Users extends Component {
 
   render() {
     return (
-      <Section>
-        <Col span="1">
-          <Table columns={columns} results={this.props.users} />
-        </Col>
-      </Section>
+      <div>
+        <div className={styles.titleStripe}>
+          <h2>Todos los Usuarios</h2>
+        </div>
+        <div className={styles.mainContainer}>
+          <Table
+            tableClassName={styles.tableView}
+            columns={columns}
+            results={this.props.users}
+            useGriddleStyles={false}
+          />
+        </div>
+      </div>
     );
   }
 }

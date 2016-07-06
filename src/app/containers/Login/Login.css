@@ -1,0 +1,49 @@
+.header {
+  height: 60px;
+  background-color: #334a5c;
+  margin: 0 auto;
+  position: fixed;
+  left: 0;
+  right: 0;
+  max-width: 1440px;
+  z-index: 99;
+}
+
+.logo {
+  float: left;
+  margin-top: 10px;
+  margin-left: 10px;
+}
+
+.logo a {
+  font-size: 1.6em;
+  color: #fff;
+}
+
+.logo a span {
+  font-weight: 300;
+}
+
+.sidebar{
+  padding: 20px;
+  overflow: hidden;
+  width: 230px;
+  height: 100%;
+  background-color: #4a6274;
+  float: left;
+  position: fixed;
+  top: 60px;
+}
+
+.sidebar a {
+  color: white;
+  display: block;
+  margin-bottom: 10px;
+}
+
+.main {
+  position: static;
+  padding-top: 60px;
+  margin-left: 290px;
+  margin-right: 20px;
+}

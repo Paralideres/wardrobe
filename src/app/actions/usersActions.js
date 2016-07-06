@@ -10,3 +10,7 @@ export function getUsers() {
     });
   };
 }
+
+export function getCurrentUser() {
+
+}

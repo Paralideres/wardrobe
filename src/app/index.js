@@ -11,6 +11,7 @@ import { Provider } from 'react-redux';
 
 import { configureStore } from './store';
 import Layout from './containers/Layout/Layout';
+import Login from './containers/Login/Login';
 import Users from './containers/Users';
 import Teams from './containers/Teams';
 import Resources from './containers/Resources';
@@ -26,6 +27,7 @@ class App extends Component {
     return (
       <Provider store={store}>
         <Router history={history}>
+          <Route path="/login" component={Login} />
           <Route path="/" component={Layout}>
             <IndexRoute component={Users} />
             <Route path="/teams" component={Teams} />
