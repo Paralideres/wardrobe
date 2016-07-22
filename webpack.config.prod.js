@@ -1,6 +1,7 @@
 /* eslint-disable */
 var path = require('path');
 var webpack = require('webpack');
+var HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
   devtool: 'sourcemap',
@@ -16,7 +17,10 @@ module.exports = {
     new webpack.DefinePlugin({
       NODE_ENV: JSON.stringify("production"),
     }),
-    new webpack.optimize.DedupePlugin()
+    new webpack.optimize.DedupePlugin(),
+    new HtmlWebpackPlugin({
+      template: 'src/templates/root.html'
+    })
   ],
   module: {
     loaders: [
