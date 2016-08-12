@@ -1,23 +1,30 @@
 /* eslint-disable */
+var _ = require('lodash');
 var path = require('path');
 var webpack = require('webpack');
+var HtmlWebpackPlugin = require('html-webpack-plugin');
+var appsConfig = require('./webpack/apps');
 
 module.exports = {
-  devtool: 'eval',
-  entry: [
-    'react-hot-loader/patch',
-    'webpack-dev-server/client?http://localhost:7000',
-    'webpack/hot/only-dev-server',
-    './src/index',
-  ],
+  devtool: 'eval-cheap-sourcemap',
+  entry: appsConfig.entryConfig,
   output: {
-    path: path.join(__dirname, 'dist'),
-    filename: 'bundle.js',
+    path: path.join(__dirname, 'build'),
+    filename: '[name]/[name].bundle.js',
     publicPath: '/static/',
   },
-  plugins: [
-    new webpack.HotModuleReplacementPlugin(),
-  ],
+  plugins: _.concat(
+    [
+      new webpack.DefinePlugin({
+        'process.env': {
+          'NODE_ENV': JSON.stringify('development')
+        }
+      }),
+      new webpack.optimize.DedupePlugin()
+    ],
+    // Generate the HTML pages
+    appsConfig.htmlPluginConfig.map(config => new HtmlWebpackPlugin(config))
+  ),
   module: {
     loaders: [
       {

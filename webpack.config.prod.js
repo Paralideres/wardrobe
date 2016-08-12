@@ -5,12 +5,13 @@ var HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
   devtool: 'sourcemap',
-  entry: [
-    './src/index'
-  ],
+  entry: {
+    'front-page': './src/apps/front-page/index',
+    'teams': './src/apps/teams/index'
+  },
   output: {
     path: path.join(__dirname, 'build'),
-    filename: 'bundle.js',
+    filename: '[name].bundle.js',
     publicPath: '/static/',
   },
   plugins: [
@@ -21,7 +22,14 @@ module.exports = {
     }),
     new webpack.optimize.DedupePlugin(),
     new HtmlWebpackPlugin({
-      template: 'src/templates/root.html'
+      chunks: ['front-page'],
+      filename: './public/front-page.html',
+      template: './src/templates/public/index.html'
+    }),
+    new HtmlWebpackPlugin({
+      chunks: ['teams'],
+      filename: './private/teams.html',
+      template: './src/templates/public/index.html'
     })
   ],
   module: {
