@@ -1,0 +1,39 @@
+:local .container {
+  background-color: #fff;
+  display: inline-block;
+}
+
+:local .title {
+  display: inline-block;
+}
+
+:local .title h4 {
+  display: inline-block;
+  margin: 30px 20px;
+  border-bottom: 3px solid #00abbc;
+}
+
+:local .title a {
+  display: inline-block;
+  margin-right: 20px;
+}
+
+:local .resourceList {
+  text-align: center;
+}
+
+:local .bottom {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+:local .button {
+  background-color: #ebebeb;
+  margin: auto;
+  padding: 13px 40px;
+  font-size: 1.4rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  color: #2e353e;
+  border-radius: 3px;
+}

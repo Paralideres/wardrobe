@@ -1,26 +1,18 @@
-import { AppContainer } from 'react-hot-loader';
+import 'normalize.css';
+import './app/styles/global.css';
+import 'whatwg-fetch';
+
 import React from 'react';
 import ReactDOM from 'react-dom';
-import App from './app/index';
+import { Provider } from 'react-redux';
+import { configureStore } from './app/store';
+import Main from './app/containers/Main';
 
+const store = configureStore();
 const rootEl = document.getElementById('root');
-ReactDOM.render(
-  <AppContainer>
-    <App />
-  </AppContainer>,
-  rootEl
-);
 
-if (module.hot) {
-  module.hot.accept('./app/index', () => {
-    // If you use Webpack 2 in ES modules mode, you can
-    // use <App /> here rather than require() a <NextApp />.
-    const NextApp = require('./app/index').default;
-    ReactDOM.render(
-      <AppContainer>
-         <NextApp />
-      </AppContainer>,
-      rootEl
-    );
-  });
-}
+ReactDOM.render(
+  <Provider store={store}>
+    <Main />
+  </Provider>,
+  rootEl);
