@@ -1,0 +1,68 @@
+.snContainer {
+  margin: 40px 12px;
+}
+
+.snNetwork {
+  color: #fff;
+  display: inline-block;
+  width: 30%;
+  font-size: 1.3rem;
+  margin-left: 5%;
+}
+
+.snFacebook {
+  background-color: #3765a3;
+}
+
+.snTwitter {
+  background-color: #5ea9dd;
+}
+
+.snYoutube {
+  background-color: #e62117;
+}
+
+.snNetwork:first-child {
+  margin-left: 0;
+}
+
+.snNetworkIcon {
+  height: 39px;
+  width: 60px;
+  font-size: 2.8rem;
+  text-align: center;
+  padding-top: 9px;
+  display: inline-block;
+  float: left;
+}
+
+.snFacebook .snNetworkIcon {
+  background-color: #0c2868;
+}
+
+.snTwitter .snNetworkIcon {
+  background-color: #2370c0;
+}
+
+.snYoutube .snNetworkIcon {
+  background-color: #cf0402;
+}
+
+.snNetworkText {
+  display: inline-block;
+  float: left;
+  margin-left: 10px;
+  padding-top: 17px;
+}
+
+.snNetworkButton {
+  display: inline-block;
+  float: right;
+  width: 70px;
+  border: 1px solid white;
+  padding: 10px;
+  color: white;
+  margin-top: 6px;
+  margin-right: 6px;
+  text-align: center;
+}
