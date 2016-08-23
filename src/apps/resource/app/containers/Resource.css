@@ -1,0 +1,105 @@
+.section {
+  min-height: 800px;
+  max-width: 900px;
+  margin: auto;
+}
+
+.header {
+  padding: 25px 0 20px;
+  display: inline-block;
+  width: 100%;
+}
+
+.author {
+  width: 40px;
+  height: 40px;
+  background-color: #ccc;
+  border-radius: 50%;
+  overflow: hidden;
+  display: inline-block;
+  float: left;
+  color: #ccc;
+}
+
+.authorName {
+  margin-left: 15px;
+  float: left;
+  margin-top: 14px;
+  font-weight: 400;
+}
+
+.actions {
+  display: inline-block;
+  float: right;
+}
+
+.action {
+  display: inline-block;
+  width: 42px;
+  height: 42px;
+  background-color: #ececec;
+  color: #747474;
+  overflow: hidden;
+  border-radius: 50%;
+  float: left;
+  font-size: 2rem;
+  text-align: center;
+  line-height: 4.2rem;
+  margin-right: 15px;
+}
+
+.category {
+  width: 100%;
+  text-transform: uppercase;
+}
+
+.categoryIcon {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background-color: #eee;
+  border-radius: 50%;
+  overflow: hidden;
+  color: #eee;
+}
+
+.categoryLink {
+  margin-top: 8px;
+  margin-left: 6px;
+}
+
+.resourceTitle {
+  margin-top: 14px;
+  font-weight: 500;
+  font-size: 3rem;
+  margin-bottom: 35px;
+}
+
+.reviewTitle {
+  margin: 8px 0px;
+  text-transform: uppercase;
+  color: #334a5c;
+  display: inline;
+  margin-right: 10px;
+}
+
+.review {
+  font-size: 1.6rem;
+  line-height: 2.8rem;
+  display: inline;
+}
+
+.download {
+  margin: 20px 0;
+}
+
+.embededResourceContainer {
+  margin: 20px 0;
+  height: 700px;
+  background-color: #f4f4f4;
+}
+
+.tagContainer {
+  display: inline-block;
+  padding: 20px;
+}

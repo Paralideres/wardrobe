@@ -9,6 +9,12 @@ const config = {
     login: {
       title: `Ingreso | ${PAGE_NAME}`,
     },
+    'resource-list': {
+      title: `Recursos | ${PAGE_NAME}`,
+    },
+    resource: {
+      title: `Recurso | ${PAGE_NAME}`,
+    },
   },
   private: {
     teams: {
