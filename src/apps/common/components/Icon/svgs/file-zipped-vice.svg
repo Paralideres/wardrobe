@@ -7,7 +7,7 @@
 	<rect fill="none" width="24" height="24"/>
 </g>
 <g id="Outline">
-	<path fill="#757575" d="M20,22V7c0-1.654-1.346-3-3-3H9V3h1V1H6v2h1v1H2v5h10V6h2v11h-2v-3H2v5h5v1H6v2h4v-2H9v-1h5v3h-1v2h8v-2H20
+	<path  d="M20,22V7c0-1.654-1.346-3-3-3H9V3h1V1H6v2h1v1H2v5h10V6h2v11h-2v-3H2v5h5v1H6v2h4v-2H9v-1h5v3h-1v2h8v-2H20
 		z M10,7H4V6h6V7z M10,17H4v-1h6V17z M18,22h-2v-4h2V22z M18,16h-2v-2h2V16z M18,12h-2v-2h2V12z M18,8h-2V6h1c0.551,0,1,0.449,1,1V8
 		z"/>
 </g>
