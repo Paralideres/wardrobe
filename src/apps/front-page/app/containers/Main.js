@@ -1,33 +1,32 @@
+import { container, extraContent } from './Main.css';
 import React, { Component } from 'react';
 import Header from './Header';
-import Central from './Central';
 import SideBar from './SideBar';
+import Central from '../components/Central/Central';
+import LastUpdates from '../components/LastUpdates/LastUpdates';
 import BlogStream from '../components/BlogStream/BlogStream';
 import Poll from '../components/Poll/Poll';
 import SocialNetworks from '../components/SocialNetworks/SocialNetworks';
 import Footer from './Footer';
+import Copy from '../components/Footer/Copy';
 
 class Users extends Component {
 
   render() {
     return (
-      <div id="main_wrapper" className="clearfix">
+      <div>
         <Header />
-        <div id="content" className="clearfix">
-
+        <div className={container} >
           <Central />
-
-          <div id="extra-content">
-
+          <LastUpdates />
+          <div className={extraContent}>
             <BlogStream />
-
             <Poll />
-
           </div>
           <SocialNetworks />
-
-          <Footer />
         </div>
+        <Footer />
+        <Copy />
       </div>
     );
   }

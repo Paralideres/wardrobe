@@ -19,8 +19,7 @@ module.exports = {
         'process.env': {
           'NODE_ENV': JSON.stringify('development')
         }
-      }),
-      new webpack.optimize.DedupePlugin()
+      })
     ],
     // Generate the HTML pages
     appsConfig.htmlPluginConfig.map(config => new HtmlWebpackPlugin(config))
@@ -36,15 +35,22 @@ module.exports = {
         test: /\.css$/,
         loaders: [
           'style',
-          'css?modules&localIdentName=[local]'
+          'css?modules&localIdentName=[name]_[local]__[hash:base64:5]',
+          'postcss'
         ]
       },
       {
-        test: /\.(jpe?g|png|gif|svg)$/i,
+        test: /\.(jpe?g|png|gif)$/i,
         loaders: [
           'file?name=[path][name].[ext]',
           'image-webpack?bypassOnDebug&optimizationLevel=7&interlaced=false',
         ],
+      },
+      {
+        test: /\.svg$/,
+        loader: 'svg-sprite-loader?' + JSON.stringify({
+          name: '[name]_[hash]'
+        })
       }
     ],
   },

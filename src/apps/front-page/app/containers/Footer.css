@@ -1,0 +1,10 @@
+.fullWidth {
+  background-color: #2e353e;
+}
+
+.footer {
+  max-width: 1140px;
+  min-width: 960px;
+  padding: 30px 20px 20px;
+  margin: auto;
+}

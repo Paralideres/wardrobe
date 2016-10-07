@@ -1,0 +1,10 @@
+.logo {
+  padding: 0 20px 0 0;
+  float: left;
+  margin-top: 18px;
+  display: inline-block;
+}
+
+.logo img {
+  width: 180px;
+}
