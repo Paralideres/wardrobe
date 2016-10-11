@@ -1,6 +1,6 @@
 import styles from './Footer.css';
 import React from 'react';
-import Menu from '../components/Footer/Menu';
+import Menu from './Menu';
 
 export default () => (
   <div className={styles.fullWidth}>

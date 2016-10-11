@@ -1,13 +1,16 @@
 import styles from './Resource.css';
 import React from 'react';
+import he from 'he';
 
-export default () => (
+export default ({
+  resource
+}) => (
   <section className={styles.section}>
     <header className={styles.header}>
       <div className={styles.author}>
       </div>
       <h4 className={styles.authorName}>
-        Nombre Autor
+        {resource.user.username}
       </h4>
       <div className={styles.actions}>
         <div className={styles.action}>
@@ -24,16 +27,12 @@ export default () => (
     <article>
       <div className={styles.category}>
         <div className={styles.categoryIcon}>Icono</div>
-        <a className={styles.categoryLink}>Categoria</a>
+        <a className={styles.categoryLink}>{resource.category.label}</a>
       </div>
-      <h1 className={styles.resourceTitle}>Titulo del Recurso</h1>
+      <h1 className={styles.resourceTitle}>{resource.title}</h1>
       <h4 className={styles.reviewTitle}>Resumen</h4>
       <div className={styles.review}>
-        Serie de 3 Estudios en los que no se tratara de ensalzar una red social,
-        pero sí usar el contexto en el que los chicos se encuentran, en su
-        idioma y su cultura, para llevarles el mismo mensaje de amor y
-        salvación de nuestro Señor Jesucristo en el matiz de colores que ya
-        conocen.
+        {he.decode(resource.review || '')}
       </div>
       <div className={styles.download}>Descargar Recurso</div>
       <div className={styles.embededResourceContainer}>Embeded content</div>

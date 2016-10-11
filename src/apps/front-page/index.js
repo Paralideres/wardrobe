@@ -1,5 +1,5 @@
 import 'normalize.css';
-import './app/styles/global.css';
+import 'common/styles/global.css';
 import 'whatwg-fetch';
 
 import React from 'react';

@@ -1,26 +1,49 @@
+import { container } from './Main.css';
 import React, { Component } from 'react';
-import Header from './Header';
+import { connect, bindActionCreators } from 'react-redux';
+
+
+import Header from 'common/containers/Header';
 import Resource from './Resource';
 import ExtraResources from './ExtraResources';
-import Footer from './Footer';
+import Footer from 'common/containers/Footer';
+import Copy from 'common/components/Copy';
 
 class Main extends Component {
 
+  componentDidMount() {
+    this.props.getResource(window.location.pathname.split('/')[2]);
+  }
+
   render() {
     return (
-      <div id="main_wrapper" className="clearfix">
+      <div>
         <Header />
-
-        <div id="content" className="clearfix">
-          <Resource />
+        <div className={container}>
+          <Resource resource={this.props.resource} />
+          <ExtraResources />
         </div>
-
-        <ExtraResources />
-
         <Footer />
+        <Copy />
       </div>
     );
   }
 }
 
-export default Main;
+
+function mapStateToProps(state) {
+  return {
+    resource: state.resource.payload
+  };
+}
+
+const mapDispatchToProps = (dispatch) => {
+  return {
+    getResource: (id) => dispatch({type: 'REQUEST_RESOURCE', id })
+  };
+};
+
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(Main);
