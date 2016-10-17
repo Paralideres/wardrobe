@@ -1,1 +1,1 @@
-export users from './users';
+export category from './category';

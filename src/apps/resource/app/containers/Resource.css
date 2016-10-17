@@ -1,11 +1,10 @@
 .section {
-  min-height: 800px;
   max-width: 900px;
   margin: auto;
+  margin-top: 30px;
 }
 
 .header {
-  padding: 25px 0 20px;
   display: inline-block;
   width: 100%;
 }
@@ -16,21 +15,35 @@
   background-color: #ccc;
   border-radius: 50%;
   overflow: hidden;
-  display: inline-block;
-  float: left;
-  color: #ccc;
+  position: absolute;
+  color: #bbb;
+  text-align: center;
+  line-height: 5.5rem;
 }
 
 .authorName {
-  margin-left: 15px;
-  float: left;
-  margin-top: 14px;
   font-weight: 400;
+  margin-bottom: 0px;
+  margin-left: 50px;
+  margin-top: 8px;
+  text-transform: uppercase;
+}
+
+.authorName a {
+  color: #bbb;
+}
+
+.date {
+  font-size: 1.2rem;
+  color: #aaa;
+  text-transform: uppercase;
+  margin-left: 50px;
 }
 
 .actions {
   display: inline-block;
   float: right;
+  margin-top: 30px;
 }
 
 .action {
@@ -42,37 +55,53 @@
   overflow: hidden;
   border-radius: 50%;
   float: left;
-  font-size: 2rem;
+  font-size: 3rem;
   text-align: center;
   line-height: 4.2rem;
   margin-right: 15px;
 }
 
 .category {
-  width: 100%;
+  display: inline-block;
   text-transform: uppercase;
+  margin-top: 30px;
 }
 
 .categoryIcon {
   display: inline-block;
   width: 20px;
   height: 20px;
-  background-color: #eee;
+  background-color: #54b1c4;
   border-radius: 50%;
   overflow: hidden;
-  color: #eee;
+  color: #54b1c4;
+  float: left;
 }
 
 .categoryLink {
-  margin-top: 8px;
+  color: #54b1c4;
+  display: inline-block;
+  float: left;
   margin-left: 6px;
+  margin-top: 3px;
 }
 
 .resourceTitle {
-  margin-top: 14px;
+  display: inline-block;
+  font-size: 3.2rem;
   font-weight: 500;
-  font-size: 3rem;
-  margin-bottom: 35px;
+  line-height: 3.8rem;
+  margin-bottom: 8px;
+  margin-top: 0px;
+  width: 100%;
+}
+
+.review {
+  font-size: 1.9rem;
+  line-height: 1.58;
+  letter-spacing: 0.013rem;
+  display: inline-block;
+  margin-top: 10px;
 }
 
 .reviewTitle {
@@ -83,17 +112,32 @@
   margin-right: 10px;
 }
 
-.review {
-  font-size: 1.6rem;
-  line-height: 2.8rem;
-  display: inline;
+.download {
+  display: inline-block;
+  float: left;
+  margin: 30px 0;
 }
 
-.download {
-  margin: 20px 0;
+.content {
+  font-size: 1.9rem;
+  line-height: 1.58;
+  display: inline-block;
+  margin-top: 40px;
+  letter-spacing: 0.013rem;
+  padding-top: 40px;
+  border-top: 1px solid #dedede;
+}
+
+.contentTitle {
+  margin: 8px 0px;
+  text-transform: uppercase;
+  color: #334a5c;
+  display: inline;
+  margin-right: 10px;
 }
 
 .embededResourceContainer {
+  display: inline-block;
   margin: 20px 0;
   height: 700px;
   background-color: #f4f4f4;

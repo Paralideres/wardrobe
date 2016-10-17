@@ -4,13 +4,21 @@ import React from 'react';
 import _range from 'lodash/range';
 import ResourceList from 'common/components/ResourceList/ResourceList';
 
-export default () => (
+export default ({
+  label,
+  id,
+  slug,
+  resources
+}) => (
   <div className={styles.listContainer}>
     <div className={styles.listTitle}>
-      <h4>Titulo de la Categoria (1/10)</h4>
+      <h4>{label} ({resources.current_page}/{resources.last_page})</h4>
+      <span>{resources.total} recursos en esta categoría</span>
     </div>
     <div className={styles.listResourceList}>
-      <ResourceList resources={_range(15)} />
+      <ResourceList
+        resources={resources.data || []}
+        category={{ label, id, slug }} />
     </div>
     <div className={styles.listPager}>
       <span className={styles.listCurrentPage} href="#">1</span>

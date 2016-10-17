@@ -1,25 +1,35 @@
 import styles from './ResourceBox.css';
 import React from 'react';
 
-export default () => (
+import CategoryIcon from 'common/components/Icon/Category';
+
+export default ({
+  id,
+  slug,
+  title,
+  review,
+  user_fullname,
+  user_id,
+  category
+}) => (
   <div className={styles.box}>
     <div className={styles.boxHeader}>
-      <div className={styles.boxHeaderIcon}><i /></div>
-      <h3 className={styles.boxHeaderTitle}>Devocionales</h3>
+      <CategoryIcon category={category.slug} size={18} />
+      <h3 className={styles.boxHeaderTitle}>
+        <a href={`/category/${category.slug}`}>{category.label}</a>
+      </h3>
     </div>
     <div className={styles.boxBody}>
       <div className={styles.boxResource}>
-        <h3>Titulo del Recurso</h3>
+        <h3>
+          <a href={`/resources/${id}/${slug}`}>{title}</a>
+        </h3>
         <summary>
-          <p>
-            Resume: Dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore Pablo sed do
-            eiusmod.
-          </p>
+          {review}
         </summary>
         <div className={styles.boxResourceAuthor}>
           <div className={styles.boxResoucesAuthorAvatar}></div>
-          <p>Author: <a>Nombre del Autor</a></p>
+          <p><a>{user_fullname}</a></p>
         </div>
       </div>
     </div>
@@ -31,7 +41,7 @@ export default () => (
       </div>
       <div className={styles.boxResourceLike}>
         <div className={styles.boxResourceLikeBox}>
-          <span>26</span>
+          <span>6</span>
           <a><i className="fa fa-heart-o" /></a>
         </div>
       </div>

@@ -1,51 +1,91 @@
 import styles from './Resource.css';
 import React from 'react';
-import he from 'he';
+
+import Button from 'common/components/Button/Button';
+import Icon from 'common/components/Icon/Icon';
+import Tag from 'common/components/Tag/Tag';
 
 export default ({
   resource
 }) => (
   <section className={styles.section}>
-    <header className={styles.header}>
+    <div className={styles.header}>
       <div className={styles.author}>
+        <Icon glyph={Icon.set.ID_CARD} width="25" height="25"/>
       </div>
       <h4 className={styles.authorName}>
-        {resource.user.username}
+        <a>{resource.user.username}</a>
       </h4>
-      <div className={styles.actions}>
-        <div className={styles.action}>
-          <i className="fa fa-share-alt" aria-hidden="true"></i>
-        </div>
-        <div className={styles.action}>
-          <i className="fa fa-heart-o" aria-hidden="true"></i>
-        </div>
-        <div className={styles.action}>
-          <i className="fa fa-ellipsis-h" aria-hidden="true"></i>
-        </div>
-      </div>
-    </header>
-    <article>
-      <div className={styles.category}>
-        <div className={styles.categoryIcon}>Icono</div>
-        <a className={styles.categoryLink}>{resource.category.label}</a>
-      </div>
-      <h1 className={styles.resourceTitle}>{resource.title}</h1>
-      <h4 className={styles.reviewTitle}>Resumen</h4>
-      <div className={styles.review}>
-        {he.decode(resource.review || '')}
-      </div>
-      <div className={styles.download}>Descargar Recurso</div>
-      <div className={styles.embededResourceContainer}>Embeded content</div>
-    </article>
-    <div className={styles.tagsContainer}>
-      <p>Encuentra recursos similares a este haciendo click en cualquiera de las
-       siguientes etiquetas</p>
-      <a>Tag</a>
-      <a>Tag</a>
-      <a>Tag</a>
-      <a>Tag</a>
-      <a>Tag</a>
-      <a>Tag</a>
+      <span className={styles.date}>
+      Publicado hace 3 horas
+      </span>
     </div>
+
+    <div className={styles.category}>
+      <div className={styles.categoryIcon}>Icono</div>
+      <a
+        href={`/category/${resource.category.slug}`}
+        className={styles.categoryLink}>
+        {resource.category.label}
+      </a>
+    </div>
+    <h1 className={styles.resourceTitle}>{resource.title}</h1>
+
+    <div className={styles.download}>
+      <Button type="passive" disabled={!resource.attachment}>
+        Descargar Recurso <Icon glyph={Icon.set.DOWNLOAD} />
+      </Button>
+      {/* Make this a tooltip
+            <b> Para descargar nuestros recursos <a> registrate ahora, es fácil</a></b>
+            */}
+    </div>
+
+    <div className={styles.actions}>
+      <div className={styles.action}>
+        <Icon glyph={Icon.set.SHARE} width="20" height="20"/>
+      </div>
+      <div className={styles.action}>
+        <Icon glyph={Icon.set.HEART} width="20" height="20"/>
+      </div>
+      <div className={styles.action}>
+        <Icon glyph={Icon.set.ELIPSIS} width="20" height="20"/>
+      </div>
+    </div>
+
+    {resource.review ? (
+    <div className={styles.review}>
+      <h4 className={styles.reviewTitle}>Resumen</h4>
+      {resource.review}
+    </div>
+    ) : null}
+
+    {resource.content ? (
+    <article className={styles.content}>
+      {resource.content}
+    </article>
+    ) : null }
+
+    {resource.attachment ? (
+    <article className={styles.embededResourceContainer}>
+      <iframe
+        src="http://docs.google.com/viewer?url=http%3A%2F%2Fparalideres.org%2Ffiles%2Fpic_8139.docx&embedded=true"
+        width="900"
+        height="700"
+      />
+    </article>
+    ) : null}
+
+    {resource.tags.length > 1 ? (
+      <div className={styles.tagsContainer}>
+        <p>Encuentra <b>recursos similares</b> a este haciendo click en cualquiera de las
+        siguientes etiquetas</p>
+        {
+          resource.tags.map(tag => (
+            <Tag key={tag.id} href="tags/">{tag.label}</Tag>
+          ))
+        }
+      </div>
+    ): null}
+
   </section>
 );

@@ -3,12 +3,13 @@ import ResourceBox from 'common/components/ResourceBox/ResourceBox';
 
 const ResourceList = ({
   resources,
+  category
 }) => {
   return (
     <div>
       {
         resources.map(r => (
-          <ResourceBox resource={r} />
+          <ResourceBox key={r.id} category={category} {...r} />
         ))
       }
     </div>

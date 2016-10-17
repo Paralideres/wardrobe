@@ -1,21 +1,46 @@
+import { container } from './Main.css';
 import React, { Component } from 'react';
-import Header from './Header';
+import { connect, bindActionCreators } from 'react-redux';
+
+import Header from 'common/containers/Header';
 import Central from './Central';
-import Footer from './Footer';
+import Footer from 'common/containers/Footer';
+import Copy from 'common/components/Copy';
 
 class Main extends Component {
 
+  componentDidMount() {
+    this.props.getCategory(window.location.pathname.split('/')[2]);
+  }
+
   render() {
     return (
-      <div id="main_wrapper" className="clearfix">
+      <div>
         <Header />
-        <div id="content" className="clearfix">
-          <Central />
+        <div className={container}>
+          <Central category={this.props.category} />
         </div>
         <Footer />
+        <Copy />
       </div>
     );
   }
 }
 
-export default Main;
+
+function mapStateToProps(state) {
+  return {
+    category: state.category.payload
+  };
+}
+
+const mapDispatchToProps = (dispatch) => {
+  return {
+    getCategory: (id) => dispatch({type: 'REQUEST_CATEGORY', id })
+  };
+};
+
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(Main);

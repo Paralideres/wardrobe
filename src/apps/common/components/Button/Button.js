@@ -5,16 +5,18 @@ import classnames from 'classnames';
 export default ({
   children,
   className,
-  type
+  type,
+  ...props
 }) => {
 
   const style = classnames(styles.base, className, {
     [styles.primary]: type === 'primary',
-    [styles.secondary]: type === 'secondary'
+    [styles.secondary]: type === 'secondary',
+    [styles.passive]: type === 'passive'
   });
 
   return (
-    <button className={style}>
+    <button className={style} {...props}>
       {children}
     </button>
   );

@@ -5,7 +5,7 @@ import { connect, bindActionCreators } from 'react-redux';
 
 import Header from 'common/containers/Header';
 import Resource from './Resource';
-import ExtraResources from './ExtraResources';
+import ExtraResources from '../components/ExtraResources';
 import Footer from 'common/containers/Footer';
 import Copy from 'common/components/Copy';
 

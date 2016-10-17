@@ -7,18 +7,18 @@ export default () => (
       <li>
         <a>RECURSOS</a>
         <ul>
-          <li><a>Devocionales</a></li>
-          <li><a>Arte y Narrativa</a></li>
-          <li><a>Dinámicas y Juegos</a></li>
-          <li><a>Estudios Bíblicos</a></li>
-          <li><a>Consejería</a></li>
-          <li><a>Cursos</a></li>
-          <li><a>Libros</a></li>
-          <li><a>Reflexiones</a></li>
-          <li><a>Tecnología</a></li>
-          <li><a>Artículos</a></li>
-          <li><a>Música</a></li>
-          <li><a>Videos</a></li>
+          <li><a href="/category/devocionales">Devocionales</a></li>
+          <li><a href="/category/arte-y-narrativa">Arte y Narrativa</a></li>
+          <li><a href="/category/dinamicas-y-juegos">Dinámicas y Juegos</a></li>
+          <li><a href="/category/estudios-biblicos">Estudios Bíblicos</a></li>
+          <li><a href="/category/consejeria">Consejería</a></li>
+          <li><a href="/category/cursos">Cursos</a></li>
+          <li><a href="/category/libros">Libros</a></li>
+          <li><a href="/category/reflexiones">Reflexiones</a></li>
+          <li><a href="/category/tecnologia">Tecnología</a></li>
+          <li><a href="/category/articulos">Artículos</a></li>
+          <li><a href="/category/musica">Música</a></li>
+          <li><a href="/category/videos">Videos</a></li>
         </ul>
       </li>
       <li>

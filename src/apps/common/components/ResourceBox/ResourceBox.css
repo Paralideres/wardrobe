@@ -1,7 +1,7 @@
 /* BOX */
 .box {
   width: 300px;
-  height: 310px;
+  height: 350px;
   background-color: #f9f9f9;
   border-radius: 5px;
   overflow: hidden;
@@ -36,6 +36,13 @@
   height: 30px;
   margin: 15px 10px 15px 15px;
   width: 30px;
+  color: white;
+  text-align: center;
+}
+
+.boxHeaderIcon i {
+  margin-top: 6px;
+  display: inline-block;
 }
 
 .boxHeaderTitle {
@@ -49,7 +56,7 @@
 
 .boxBody {
   position: relative;
-  height: 190px;
+  height: 230px;
   width: 100%;
 }
 
@@ -64,9 +71,16 @@
   font-size: 1.8rem;
 }
 
+.boxResource h3 > a {
+  color: #232931;
+}
+
 .boxResource summary {
   color: #77797a;
   font-size: 1.2rem;
+  overflow: hidden;
+  max-height: 90px;
+  line-height: 1.53;
 }
 
 .boxResourceAuthor {
@@ -77,13 +91,14 @@
 }
 
 .boxResoucesAuthorAvatar {
-  background-color: #54b1c4;
+  background-color: #ccc;
   border-radius: 50%;
   display: inline-block;
   float: left;
   height: 30px;
   margin: 0px 10px 0px 20px;
   width: 30px;
+  color: #bbb;
 }
 
 .boxResourceAuthor p {

@@ -1,6 +1,6 @@
 import { get } from '../utils/request';
 
-export function requestUsers() {
-  return get('/api/users').
+export function fetchCategory(id) {
+  return get(`/api/categories/${id}`).
     then(response => response.json());
 }

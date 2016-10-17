@@ -1,0 +1,64 @@
+.base {
+  background-color: #54b1c4;
+  border-radius: 50%;
+  display: inline-block;
+  float: left;
+  height: 30px;
+  margin: 15px 10px 15px 15px;
+  width: 30px;
+  color: white;
+  text-align: center;
+}
+
+.base i {
+  margin-top: 6px;
+  display: inline-block;
+}
+
+.arte-y-narrativa {
+  background-color: #b45f4a;
+}
+
+.devocionales {
+  background-color: #54b1c4;
+}
+
+.dinamicas-y-juegos {
+  background-color: #ecad29;
+}
+
+.estudios-biblicos {
+  background-color: #74c97f;
+}
+
+.consejeria {
+  background-color: #d0783a;
+}
+
+.cursos {
+  background-color: #4469c7;
+}
+
+.libros {
+  background-color: #6dbc9f;
+}
+
+.reflexiones {
+  background-color: #b891c4;
+}
+
+.tecnologia {
+  background-color: #515f74;
+}
+
+.articulos {
+  background-color: #526173;
+}
+
+.musica {
+  background-color: #526176;
+}
+
+.videos {
+  background-color: #b7b7b7;
+}
