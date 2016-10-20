@@ -1,6 +1,7 @@
 .luContainer {
   background-color: #fff;
   display: inline-block;
+  width: 100%;
 }
 
 .luTitle {

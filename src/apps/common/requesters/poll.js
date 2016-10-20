@@ -1,6 +1,6 @@
 import { get } from '../utils/request';
 
-export function requestUsers() {
-  return get('/api/users').
+export function fetchLastPoll() {
+  return get(`/api/polls/last`).
     then(response => response.json());
 }

@@ -4,6 +4,7 @@ export function get(url) {
       Accept: 'application/json',
       'Content-Type': 'application/json',
     },
+    mode: 'no-cors',
     credentials: 'same-origin',
   });
 }
@@ -15,6 +16,7 @@ export function post(url, data) {
       Accept: 'application/json',
       'Content-Type': 'application/json',
     },
+    mode: 'cors',
     credentials: 'same-origin',
     body: JSON.stringify(data),
   });

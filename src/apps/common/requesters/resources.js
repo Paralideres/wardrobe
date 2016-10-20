@@ -1,7 +1,7 @@
 import { get } from '../utils/request';
 
-export function fetchResources() {
-  return get(`/api/resources`).
+export function fetchResources(limit = 20) {
+  return get(`/api/resources?limit=${limit}`).
     then(response => response.json());
 }
 

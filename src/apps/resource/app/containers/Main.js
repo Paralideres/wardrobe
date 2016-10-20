@@ -30,7 +30,6 @@ class Main extends Component {
   }
 }
 
-
 function mapStateToProps(state) {
   return {
     resource: state.resource.payload

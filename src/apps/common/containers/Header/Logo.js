@@ -4,7 +4,7 @@ import logoImg from 'img/paralideres_200x27.png';
 
 export default () => (
   <div className={logo}>
-    <a href="http://www.paralideres.org/">
+    <a href="/">
       <img
         src={logoImg}
         alt="ParaLideres.org | Recursos - Capacitación - Comunidad"

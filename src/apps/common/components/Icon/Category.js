@@ -19,9 +19,7 @@ const categoryIconMap = {
 }
 
 export default ({ category, size }) => {
-
   const iconStyle = cx(styles.base, styles[category]);
-  console.log(styles);
   return (
     <div className={iconStyle}>
       <Icon
