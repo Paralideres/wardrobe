@@ -1,37 +1,29 @@
 /* eslint-disable */
+var _ = require('lodash');
 var path = require('path');
 var webpack = require('webpack');
 var HtmlWebpackPlugin = require('html-webpack-plugin');
+var appsConfig = require('./webpack/apps');
 
 module.exports = {
   devtool: 'sourcemap',
-  entry: {
-    'front-page': './src/apps/front-page/index',
-    'teams': './src/apps/teams/index'
-  },
+  entry: appsConfig.entryConfig,
   output: {
     path: path.join(__dirname, 'build'),
-    filename: '[name].bundle.js',
+    filename: '[name]/[name].bundle.js',
     publicPath: '/static/',
   },
-  plugins: [
-    new webpack.DefinePlugin({
-      'process.env': {
-        'NODE_ENV': JSON.stringify('production')
-      }
-    }),
-    new webpack.optimize.DedupePlugin(),
-    new HtmlWebpackPlugin({
-      chunks: ['front-page'],
-      filename: './public/front-page.html',
-      template: './src/templates/public/index.html'
-    }),
-    new HtmlWebpackPlugin({
-      chunks: ['teams'],
-      filename: './private/teams.html',
-      template: './src/templates/public/index.html'
-    })
-  ],
+  plugins: _.concat(
+    [
+      new webpack.DefinePlugin({
+        'process.env': {
+          'NODE_ENV': JSON.stringify('production')
+        }
+      })
+    ],
+    // Generate the HTML pages
+    appsConfig.htmlPluginConfig.map(config => new HtmlWebpackPlugin(config))
+  ),
   module: {
     loaders: [
       {
@@ -43,10 +35,29 @@ module.exports = {
         test: /\.css$/,
         loaders: [
           'style',
-          'css?modules&importLoaders=1&localIdentName=[name]__[local]___[hash:base64:5]',
+          'css?modules&localIdentName=[name]_[local]__[hash:base64:5]',
           'postcss'
         ]
+      },
+      {
+        test: /\.(jpe?g|png|gif)$/i,
+        loaders: [
+          'file?name=[path][name].[ext]',
+          'image-webpack?bypassOnDebug&optimizationLevel=7&interlaced=false',
+        ],
+      },
+      {
+        test: /\.svg$/,
+        loader: 'svg-sprite-loader?' + JSON.stringify({
+          name: '[name]_[hash]'
+        })
       }
     ],
   },
+  resolve: {
+    alias: {
+      img: path.join(__dirname, 'src/img'),
+      common: path.join(__dirname, 'src/apps/common'),
+    }
+  }
 };
