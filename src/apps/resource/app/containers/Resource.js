@@ -68,7 +68,7 @@ export default ({
     {resource.attachment ? (
     <article className={styles.embededResourceContainer}>
       <iframe
-        src="http://docs.google.com/viewer?url=http%3A%2F%2Fparalideres.org%2Ffiles%2Fpic_8139.docx&embedded=true"
+        src="https://docs.google.com/viewer?url=http%3A%2F%2Fparalideres.org%2Ffiles%2Fpic_8139.docx&embedded=true"
         width="900"
         height="700"
       />

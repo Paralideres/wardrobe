@@ -16,7 +16,7 @@ class Users extends Component {
   componentDidMount() {
     this.props.getResources();
     this.props.getPoll();
-    this.props.getBlogPosts();
+    //this.props.getBlogPosts();
   }
 
   render() {

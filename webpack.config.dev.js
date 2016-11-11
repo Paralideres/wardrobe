@@ -6,7 +6,7 @@ var HtmlWebpackPlugin = require('html-webpack-plugin');
 var appsConfig = require('./webpack/apps');
 
 module.exports = {
-  devtool: 'eval-cheap-sourcemap',
+  devtool: 'inline-sourcemap',
   entry: appsConfig.entryConfig,
   output: {
     path: path.join(__dirname, 'build'),
