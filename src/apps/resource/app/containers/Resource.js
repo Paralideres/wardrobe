@@ -5,6 +5,17 @@ import Button from 'common/components/Button/Button';
 import Icon from 'common/components/Icon/Icon';
 import Tag from 'common/components/Tag/Tag';
 
+function getIframeUrl(resource = {}) {
+  if (!resource.attachment) {
+    return false;
+  }
+  const { id, attachment } = resource;
+  const base = 'https://docs.google.com/viewer';
+  const docUrl = `${window.location.origin}/resources/${id}/file/${attachment}`;
+  const config = '&embedded=true';
+  return `${base}?url=${encodeURIComponent(docUrl)}${config}`;
+}
+
 export default ({
   resource
 }) => (
@@ -68,7 +79,7 @@ export default ({
     {resource.attachment ? (
     <article className={styles.embededResourceContainer}>
       <iframe
-        src="https://docs.google.com/viewer?url=http%3A%2F%2Fparalideres.org%2Ffiles%2Fpic_8139.docx&embedded=true"
+        src={getIframeUrl(resource)}
         width="900"
         height="700"
       />

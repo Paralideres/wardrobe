@@ -14,9 +14,10 @@ export default function resourceReducer(state = initialState, action) {
       };
     case 'RECEIVE_POLL':
       return {
-        ...state,
         isFetching: false,
-        payload: action.payload
+        payload: Object.assign({}, state.payload, action.payload, {
+          options: action.payload.options || []
+        })
       };
     default:
       return state;
