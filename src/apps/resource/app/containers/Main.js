@@ -1,7 +1,6 @@
 import { container } from './Main.css';
 import React, { Component } from 'react';
-import { connect, bindActionCreators } from 'react-redux';
-
+import { connect } from 'react-redux';
 
 import Header from 'common/containers/Header';
 import Resource from './Resource';
@@ -10,15 +9,10 @@ import Footer from 'common/containers/Footer';
 import Copy from 'common/components/Copy';
 
 class Main extends Component {
-
-  componentDidMount() {
-    this.props.getResource(window.location.pathname.split('/')[2]);
-  }
-
   render() {
     return (
       <div>
-        <Header />
+        <Header user={this.props.currentUser}/>
         <div className={container}>
           <Resource resource={this.props.resource} />
           <ExtraResources />
@@ -32,17 +26,11 @@ class Main extends Component {
 
 function mapStateToProps(state) {
   return {
-    resource: state.resource.payload
+    resource: state.resource,
+    currentUser: state.currentUser
   };
 }
 
-const mapDispatchToProps = (dispatch) => {
-  return {
-    getResource: (id) => dispatch({type: 'REQUEST_RESOURCE', id })
-  };
-};
-
 export default connect(
-  mapStateToProps,
-  mapDispatchToProps
+  mapStateToProps
 )(Main);

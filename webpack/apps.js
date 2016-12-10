@@ -1,25 +1,14 @@
 const _ = require('lodash');
 
-const PAGE_NAME = 'ParaLideres.org';
 const config = {
   public: {
-    'front-page': {
-      title: `${PAGE_NAME} | Recursos y Herramientas para el trabajo con jovenes y adolescentes`,
-    },
-    login: {
-      title: `Ingreso | ${PAGE_NAME}`,
-    },
-    'resource-list': {
-      title: `Recursos | ${PAGE_NAME}`,
-    },
-    resource: {
-      title: `Recurso | ${PAGE_NAME}`,
-    },
+    'front-page': {},
+    login: {},
+    'resource-list': {},
+    resource: {},
   },
   private: {
-    teams: {
-      title: `Equipos | ${PAGE_NAME}`,
-    },
+    teams: {},
   },
 };
 
@@ -31,20 +20,6 @@ const entryConfig = _.reduce(config, (entries, pages) =>
       }), {}))
 , {});
 
-const htmlPluginConfig = _.reduce(config, (entries, pages, type) =>
-  _.concat(entries,
-    _.reduce(pages, (apps, appConfig, appName) =>
-      _.concat(apps, {
-        chunks: [appName],
-        filename: `./${appName}/index.html`,
-        template: `./src/templates/${type}/index.html`,
-        title: appConfig.title,
-      })
-    , [])
-  )
-, []);
-
 module.exports = {
   entryConfig,
-  htmlPluginConfig,
 };

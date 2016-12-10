@@ -21,3 +21,22 @@ export function post(url, data) {
     body: JSON.stringify(data),
   });
 }
+
+/**
+ * Transforms the response to JSON
+ */
+export function toJson(response) {
+  return isValid(response).then(() => response.json());
+}
+
+/**
+ * Check for the correct status
+ */
+export function isValid(response) {
+  return new Promise((resolve, reject) => {
+    if (response.status >= 200 && response.status <= 300) {
+      resolve();
+    }
+    reject();
+  });
+}

@@ -18,8 +18,8 @@ const categoryIconMap = {
   'videos': Icon.set.VIDEO_CLIP
 }
 
-export default ({ category, size }) => {
-  const iconStyle = cx(styles.base, styles[category]);
+export default ({ category, size, className }) => {
+  const iconStyle = cx(styles.base, styles[category], className);
   return (
     <div className={iconStyle}>
       <Icon

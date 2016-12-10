@@ -1,11 +1,4 @@
-const initialState = {
-  isFetching: false,
-  payload: {
-    user: {},
-    category: {},
-    tags: []
-  }
-};
+const initialState = {};
 
 export default function resourceReducer(state = initialState, action) {
   switch (action.type) {

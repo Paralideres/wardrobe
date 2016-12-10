@@ -4,6 +4,7 @@ import React from 'react';
 import Button from 'common/components/Button/Button';
 import Icon from 'common/components/Icon/Icon';
 import Tag from 'common/components/Tag/Tag';
+import CategoryIcon from 'common/components/Icon/Category';
 
 function getIframeUrl(resource = {}) {
   if (!resource.attachment) {
@@ -11,7 +12,7 @@ function getIframeUrl(resource = {}) {
   }
   const { id, attachment } = resource;
   const base = 'https://docs.google.com/viewer';
-  const docUrl = `${window.location.origin}/resources/${id}/file/${attachment}`;
+  const docUrl = `https://test.paralideres.org/resources/${id}/file/${attachment}`;
   const config = '&embedded=true';
   return `${base}?url=${encodeURIComponent(docUrl)}${config}`;
 }
@@ -33,7 +34,10 @@ export default ({
     </div>
 
     <div className={styles.category}>
-      <div className={styles.categoryIcon}>Icono</div>
+      <CategoryIcon
+        category={resource.category.slug}
+        className={styles.categoryIcon}
+        size={18} />
       <a
         href={`/category/${resource.category.slug}`}
         className={styles.categoryLink}>
@@ -78,11 +82,7 @@ export default ({
 
     {resource.attachment ? (
     <article className={styles.embededResourceContainer}>
-      <iframe
-        src={getIframeUrl(resource)}
-        width="900"
-        height="700"
-      />
+      
     </article>
     ) : null}
 

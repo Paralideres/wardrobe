@@ -15,6 +15,7 @@ export function post(url, data) {
       Accept: 'application/json',
       'Content-Type': 'application/json',
     },
+    mode: 'cors',
     credentials: 'same-origin',
     body: JSON.stringify(data),
   });

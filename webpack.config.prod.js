@@ -2,7 +2,6 @@
 var _ = require('lodash');
 var path = require('path');
 var webpack = require('webpack');
-var HtmlWebpackPlugin = require('html-webpack-plugin');
 var appsConfig = require('./webpack/apps');
 
 module.exports = {
@@ -21,8 +20,8 @@ module.exports = {
         }
       })
     ],
-    // Generate the HTML pages
-    appsConfig.htmlPluginConfig.map(config => new HtmlWebpackPlugin(config))
+    // CSS Extract,
+    new ExtractTextPlugin("[name]/[name].css")
   ),
   module: {
     loaders: [

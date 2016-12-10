@@ -8,13 +8,15 @@ export default ({
   slug,
   title,
   review,
-  user_fullname,
-  user_id,
+  user,
   category
 }) => (
   <div className={styles.box}>
     <div className={styles.boxHeader}>
-      <CategoryIcon category={category.slug} size={18} />
+      <CategoryIcon
+        category={category.slug}
+        className={styles.boxHeaderIcon}
+        size={14} />
       <h3 className={styles.boxHeaderTitle}>
         <a href={`/category/${category.slug}`}>{category.label}</a>
       </h3>
@@ -29,7 +31,7 @@ export default ({
         </summary>
         <div className={styles.boxResourceAuthor}>
           <div className={styles.boxResoucesAuthorAvatar}></div>
-          <p><a>{user_fullname}</a></p>
+          <p><a href={`/users/${user.id}`}>{user.fullname}</a></p>
         </div>
       </div>
     </div>

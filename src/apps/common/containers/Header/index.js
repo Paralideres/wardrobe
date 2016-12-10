@@ -6,15 +6,21 @@ import Logo from './Logo';
 import Menu from './Menu';
 import SearchBox from './SearchBox';
 
-const Header = () => (
+const Header = ({
+  user
+}) => (
   <div className={styles.fullWidth}>
     <header className={styles.header}>
       <Logo />
       <Menu />
-      <UserAccount />
+      <UserAccount user={user} />
       <SearchBox />
     </header>
   </div>
 );
+
+Header.propTypes = {
+  user: React.PropTypes.object
+}
 
 export default Header;

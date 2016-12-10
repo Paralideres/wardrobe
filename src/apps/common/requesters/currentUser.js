@@ -1,6 +1,11 @@
-import { post } from '../utils/request';
+import { get, post, toJson } from '../utils/request';
 
 export function requestLogin(credentials) {
   return post('/api/account/login', credentials).
-    then(response => response.json());
+    then(toJson);
+}
+
+export function getCurrentUser() {
+  return get('/api/account').
+    then(toJson);
 }

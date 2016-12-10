@@ -2,7 +2,7 @@
 var _ = require('lodash');
 var path = require('path');
 var webpack = require('webpack');
-var HtmlWebpackPlugin = require('html-webpack-plugin');
+var ExtractTextPlugin = require("extract-text-webpack-plugin");
 var appsConfig = require('./webpack/apps');
 
 module.exports = {
@@ -21,8 +21,8 @@ module.exports = {
         }
       })
     ],
-    // Generate the HTML pages
-    appsConfig.htmlPluginConfig.map(config => new HtmlWebpackPlugin(config))
+    // CSS Extract,
+    new ExtractTextPlugin("[name]/[name].css")
   ),
   module: {
     loaders: [
@@ -33,11 +33,11 @@ module.exports = {
       },
       {
         test: /\.css$/,
-        loaders: [
-          'style',
-          'css?modules&localIdentName=[name]_[local]__[hash:base64:5]',
-          'postcss'
-        ]
+        loader: ExtractTextPlugin.extract(
+          'style-loader',
+          'css-loader?modules&localIdentName=[name]_[local]__[hash:base64:5]',
+          'postcss-loader'
+        )
       },
       {
         test: /\.(jpe?g|png|gif)$/i,
