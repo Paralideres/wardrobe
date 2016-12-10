@@ -1,23 +1,8 @@
-import 'normalize.css';
-import 'common/styles/global.css';
+import 'common/utils/polyfill';
 
-import 'babel-polyfill';
-import 'whatwg-fetch';
-
-import React from 'react';
-import ReactDOM from 'react-dom';
-import { Provider } from 'react-redux';
-import { configureStore } from './app/store';
+import { init } from 'common/containers/Base';
 import Main from './app/containers/Main';
+import rootReducer from './reducers';
 
-
-const initialState = window.__INITIAL_STATE__ || {};
-
-const store = configureStore(initialState);
-const rootEl = document.getElementById('root');
-
-ReactDOM.render(
-  <Provider store={store}>
-    <Main />
-  </Provider>,
-  rootEl);
+// App Entry Point
+init(Main, rootReducer);

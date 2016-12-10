@@ -1,19 +1,25 @@
 import styles from './Header.css';
 import React from 'react';
+import { connect } from 'react-redux';
 
-import UserAccount from './UserAccount';
 import Logo from './Logo';
 import Menu from './Menu';
+import UserAccount from './UserAccount';
+import ActionButtons from './ActionButtons';
 import SearchBox from './SearchBox';
 
 const Header = ({
-  user
+  currentUser
 }) => (
   <div className={styles.fullWidth}>
     <header className={styles.header}>
       <Logo />
       <Menu />
-      <UserAccount user={user} />
+      { currentUser ? (
+        <UserAccount user={currentUser} />
+      ): (
+        <ActionButtons />
+      )}
       <SearchBox />
     </header>
   </div>
@@ -23,4 +29,10 @@ Header.propTypes = {
   user: React.PropTypes.object
 }
 
-export default Header;
+function mapStateToProps({ currentUser }) {
+  return { currentUser }
+}
+
+export default connect(
+  mapStateToProps
+)(Header);

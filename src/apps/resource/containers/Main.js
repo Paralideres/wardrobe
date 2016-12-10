@@ -12,7 +12,7 @@ class Main extends Component {
   render() {
     return (
       <div>
-        <Header user={this.props.currentUser}/>
+        <Header/>
         <div className={container}>
           <Resource resource={this.props.resource} />
           <ExtraResources />
@@ -26,8 +26,7 @@ class Main extends Component {
 
 function mapStateToProps(state) {
   return {
-    resource: state.resource,
-    currentUser: state.currentUser
+    resource: state.resource
   };
 }
 
