@@ -1,5 +1,7 @@
-import { container, button } from './UserAccount.css';
+import { avatar, container, button } from './UserAccount.css';
+
 import React from 'react';
+import Icon from 'common/components/Icon/Icon';
 import Button  from 'common/components/Button/Button';
 import { redirect } from 'common/utils/window';
 
@@ -8,12 +10,8 @@ const UserAccount = ({
 }) => {
   return (
     <div className={container}>
-      <a
-        onClick={() => redirect(`/profile/${user.id}`)}>
-        {user.username}
-      </a>
-      <a href="#">
-        Logout
+      <a className={avatar} href={`/profile/${user.id}`} title={user.username}>
+        <Icon glyph={Icon.set.ID_CARD} width="25" height="25"/>
       </a>
     </div>
   );

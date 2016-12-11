@@ -1,6 +1,8 @@
 .nav {
+  float: left;
   padding-left: 3px;
-  margin-top: 1px
+  margin-top: 1px;
+  margin-right: 20px;
 }
 .nav ul {
   margin: 0;
@@ -18,7 +20,7 @@
   display: inline-block;
   font-size: 1.4rem;
   font-weight: bold;
-  height: 23px;
+  height: 21px;
   padding: 24px 4px 13px 0;
   text-decoration: none;
   vertical-align: middle;
@@ -34,7 +36,7 @@
   left: 0;
   position: absolute;
   right: 0;
-  top: 61px;
+  top: 60px;
   z-index: 999;
   min-width: 960px;
   margin: auto;

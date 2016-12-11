@@ -37,7 +37,7 @@ export default ({
       <CategoryIcon
         category={resource.category.slug}
         className={styles.categoryIcon}
-        size={18} />
+        size={14} />
       <a
         href={`/category/${resource.category.slug}`}
         className={styles.categoryLink}>
@@ -82,7 +82,7 @@ export default ({
 
     {resource.attachment ? (
     <article className={styles.embededResourceContainer}>
-      
+
     </article>
     ) : null}
 

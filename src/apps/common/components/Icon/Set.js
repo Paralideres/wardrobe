@@ -21,6 +21,7 @@ import graduationHat from './svgs/graduation-hat.svg';
 import lamp from './svgs/lamp-studio-1.svg';
 import musicNote from './svgs/music-note-1.svg';
 import userChat from './svgs/user-chat-1.svg';
+import search from './svgs/magnifying-glass.svg';
 
 const Set = {
   ADD_CIRCLE: addCircle,
@@ -45,7 +46,8 @@ const Set = {
   GRADUATION: graduationHat,
   LAMP: lamp,
   MUSIC_NOTE: musicNote,
-  USER_CHAT: userChat
+  USER_CHAT: userChat,
+  SEARCH: search
 }
 
 export default Set;

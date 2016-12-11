@@ -15,12 +15,11 @@ const Header = ({
     <header className={styles.header}>
       <Logo />
       <Menu />
-      { currentUser ? (
-        <UserAccount user={currentUser} />
-      ): (
-        <ActionButtons />
-      )}
       <SearchBox />
+      { currentUser ?
+        (<UserAccount user={currentUser} />) :
+        (<ActionButtons />)
+      }
     </header>
   </div>
 );

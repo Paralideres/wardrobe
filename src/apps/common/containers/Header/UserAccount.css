@@ -5,3 +5,16 @@
 .button {
   margin: 11px 10px
 }
+
+.avatar {
+  background-color: #ccc;
+  border-radius: 50%;
+  color: #bbb;
+  display: inline-block;
+  height: 35px;
+  line-height: 5rem;
+  margin-top: 10px;
+  overflow: hidden;
+  text-align: center;
+  width: 35px;
+}

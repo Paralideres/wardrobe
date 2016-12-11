@@ -4,7 +4,7 @@ import Icon from 'common/components/Icon/Icon';
 
 export default () => (
   <div className={searchBox}>
-    <Icon className={icon} glyph={Icon.set.BINOCULARS} />
+    <Icon className={icon} glyph={Icon.set.SEARCH} />
     <input className={input} placeholder="Buscar recursos..." />
   </div>
 );
