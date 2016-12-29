@@ -16,10 +16,23 @@ export function post(url, data) {
       Accept: 'application/json',
       'Content-Type': 'application/json',
     },
-    mode: 'cors',
+    mode: 'no-cors',
     credentials: 'same-origin',
     body: JSON.stringify(data),
   });
+}
+
+export function postForm(url, data, headers) {
+  return fetch(url, {
+    method: 'POST',
+    headers: Object.assign({}, {
+      Accept: 'application/json',
+      'Content-Type': 'application/x-www-form-urlencoded; charset=utf-8',
+    }),
+    mode: 'no-cors',
+    credentials: 'same-origin',
+    body: data,
+  })
 }
 
 /**

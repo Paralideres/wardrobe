@@ -11,7 +11,7 @@ function usersReducer(state = initialState, action) {
         isFetching: false
       }, action.payload);
     default:
-      return state;
+      return state || initialState;
   }
 }
 

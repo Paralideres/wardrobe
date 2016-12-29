@@ -4,6 +4,7 @@ const config = {
   public: {
     'front-page': {},
     login: {},
+    register: {},
     'resource-list': {},
     resource: {},
   },

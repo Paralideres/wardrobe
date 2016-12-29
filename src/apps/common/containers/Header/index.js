@@ -16,7 +16,7 @@ const Header = ({
       <Logo />
       <Menu />
       <SearchBox />
-      { currentUser ?
+      { currentUser.id ?
         (<UserAccount user={currentUser} />) :
         (<ActionButtons />)
       }
@@ -25,7 +25,7 @@ const Header = ({
 );
 
 Header.propTypes = {
-  user: React.PropTypes.object
+  currentUser: React.PropTypes.object
 }
 
 function mapStateToProps({ currentUser }) {

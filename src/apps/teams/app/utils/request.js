@@ -3,6 +3,7 @@ export function get(url) {
     headers: {
       Accept: 'application/json',
       'Content-Type': 'application/json',
+      'X-CSRF-TOKEN': window.__csrf
     },
     credentials: 'same-origin',
   });
@@ -14,6 +15,7 @@ export function post(url, data) {
     headers: {
       Accept: 'application/json',
       'Content-Type': 'application/json',
+      'X-CSRF-TOKEN': window.__csrf
     },
     credentials: 'same-origin',
     body: JSON.stringify(data),

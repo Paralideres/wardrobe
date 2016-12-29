@@ -5,7 +5,7 @@ import { connect, bindActionCreators } from 'react-redux';
 import Header from 'common/containers/Header';
 import Footer from 'common/containers/Footer';
 import Copy from 'common/components/Copy';
-import { sendCredentials } from '../actions/currentUserActions';
+import { sendCredentials } from '../actions/userActions';
 
 class Users extends Component {
 
@@ -59,11 +59,7 @@ function mapStateToProps(state) {
 
 function mapDispatchToProps(dispatch) {
   return {
-    login: (email, password) =>
-      dispatch({
-        type: 'REQUEST_LOGIN',
-        payload: { email, password }
-      })
+    login: (email, password) => dispatch(sendCredentials({ email, password }))
   }
 }
 
