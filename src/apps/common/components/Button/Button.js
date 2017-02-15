@@ -5,14 +5,14 @@ import classnames from 'classnames';
 export default ({
   children,
   className,
-  type,
+  mode,
   ...props
 }) => {
 
   const style = classnames(styles.base, className, {
-    [styles.primary]: type === 'primary',
-    [styles.secondary]: type === 'secondary',
-    [styles.passive]: type === 'passive'
+    [styles.primary]: mode === 'primary',
+    [styles.secondary]: mode === 'secondary',
+    [styles.passive]: mode === 'passive'
   });
 
   return (

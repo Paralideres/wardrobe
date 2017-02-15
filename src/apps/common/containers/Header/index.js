@@ -11,17 +11,15 @@ import SearchBox from './SearchBox';
 const Header = ({
   currentUser
 }) => (
-  <div className={styles.fullWidth}>
-    <header className={styles.header}>
-      <Logo />
-      <Menu />
-      <SearchBox />
-      { currentUser.id ?
-        (<UserAccount user={currentUser} />) :
-        (<ActionButtons />)
-      }
-    </header>
-  </div>
+  <header className={styles.header}>
+    <Logo />
+    <Menu />
+    <SearchBox />
+    { currentUser && currentUser.id ?
+      (<UserAccount user={currentUser} />) :
+      (<ActionButtons />)
+    }
+  </header>
 );
 
 Header.propTypes = {

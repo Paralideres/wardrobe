@@ -15,7 +15,7 @@ const ActionButtons = () => {
       <Button
         className={button}
         onClick={() => redirect('/register')}
-        type="secondary">
+        mode="secondary">
         Registrarme
       </Button>
     </div>
